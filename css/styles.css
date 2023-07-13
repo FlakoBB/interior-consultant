@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro&family=Lora&family=Montserrat:wght@400;600&display=swap');
+
+/* font-family: 'Crimson Pro', serif;
+font-family: 'Lora', serif;
+font-family: 'Montserrat', sans-serif; */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+html,
+body {
+  min-height: 100dvh;
+  background-color: #181719;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 6rem;
+  padding: 0 4rem;
+}
+
+header .logo {
+  border: 1px solid #fff;
+  font-size: .8rem;
+  padding: 1em 1.5em;
+  text-transform: uppercase;
+  font-family: 'Crimson Pro', serif;
+}
+
+header .burger,
+.close {
+  height: 3rem;
+  width: 3rem;
+  padding: .2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.close {
+  height: 2rem;
+  width: 2rem;
+}
+
+header .burger {
+  display: none;
+}
+
+.burger img,
+.close img {
+  width: 100%;
+}
+
+.burger:hover,
+.close:hover {
+  transform: scale(110%)
+}
+
+#menu_fs {
+  background-color: #181719;
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  width: 100%;
+  min-height: 100%;
+  padding: 2rem 4rem;
+  z-index: 1;
+}
+
+#menu_fs nav {
+  flex: 1;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+#menu_fs nav .link {
+  font-size: 2rem;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+nav .link {
+  position: relative;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  padding: .4em 0;
+  text-align: center;
+}
+
+.link a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.link:hover {
+  font-weight: 600;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border-bottom: 2px solid #fff;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform .3s ease-out;
+}
+
+.link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* ? Responsive */
+
+@media (max-width: 767px) {
+  header nav {
+    display: none;
+  }
+
+  header .burger,
+  .close {
+    display: block;
+  }
+}
